@@ -1,5 +1,4 @@
-// import Navbar from "./components/Navbar";
-// import PipelineColumn from "./components/PipelineColumn";
+import PipelineColumn from "../components/PipelineColumn";
 
 export default function CRMPage() {
   const stages = [
@@ -43,7 +42,7 @@ export default function CRMPage() {
 
   return (
     <div className="p-2 overflow-x-auto bg-gray-100">
-      {/* <Navbar />
+      {/* <CRMNavbar /> */}
       <div className="flex flex-row justify-center gap-4 mt-6 ">
         {stages.map((stage, idx) => (
           <PipelineColumn
@@ -54,10 +53,7 @@ export default function CRMPage() {
             deals={stage.deals}
           />
         ))}
-      </div> */}
-      <h1 className="text-2xl font-bold text-center text-gray-700">
-        CRM Pipeline Page Under Construction
-      </h1>
+      </div>
     </div>
   );
 }
