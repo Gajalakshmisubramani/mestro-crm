@@ -1,4 +1,5 @@
 import PipelineColumn from "../components/PipelineColumn";
+import PipelineSubNav from "../components/PipelineSubNav"; // 👈 import the sub nav
 
 export default function CRMPage() {
   const stages = [
@@ -20,7 +21,7 @@ export default function CRMPage() {
     {
       title: "Negotiation/Review",
       total: "₹0.00",
-      count: 0,
+      count: 2,
       deals: [
         {
           title: "Zylker Yearly Subs...",
@@ -41,18 +42,22 @@ export default function CRMPage() {
   ];
 
   return (
-    <div className="p-2 overflow-x-auto bg-gray-100">
-      {/* <CRMNavbar /> */}
-      <div className="flex flex-row justify-center gap-4 mt-6 ">
-        {stages.map((stage, idx) => (
-          <PipelineColumn
-            key={idx}
-            title={stage.title}
-            total={stage.total}
-            count={stage.count}
-            deals={stage.deals}
-          />
-        ))}
+    <div className="flex flex-col h-screen bg-gray-100">
+      {/* Sub Navbar */}
+      <PipelineSubNav /> {/* 👈 this appears at the top */}
+      {/* Pipeline Columns */}
+      <div className="flex-1 p-2 overflow-x-auto">
+        <div className="flex flex-row gap-4 h-full">
+          {stages.map((stage, idx) => (
+            <PipelineColumn
+              key={idx}
+              title={stage.title}
+              total={stage.total}
+              count={stage.count}
+              deals={stage.deals}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
