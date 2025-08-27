@@ -22,9 +22,14 @@ type NavItem = {
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { id: "pipelines", label: "Pipelines", href: "/crm", Icon: Layers },
-  { id: "contacts", label: "Contacts", href: "/contacts", Icon: Users },
-  { id: "companies", label: "Companies", href: "/companies", Icon: BookOpen },
+  { id: "pipelines", label: "Pipelines", href: "/crm/pipelines", Icon: Layers },
+  { id: "contacts", label: "Contacts", href: "/crm/contacts", Icon: Users },
+  {
+    id: "companies",
+    label: "Companies",
+    href: "/crm/company",
+    Icon: BookOpen,
+  },
   { id: "products", label: "Products", href: "/products", Icon: Box },
   {
     id: "activities",

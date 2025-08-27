@@ -21,7 +21,7 @@ export default function CRMLayout({ children }: { children: React.ReactNode }) {
         </aside>
 
         {/* Page Content */}
-        <main className="flex-1 overflow-y-auto p-4">{children}</main>
+        <main className="flex-1 overf   low-y-auto p-4">{children}</main>
       </div>
     </>
   );
